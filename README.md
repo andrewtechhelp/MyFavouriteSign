@@ -1,5 +1,5 @@
-# MyFavouriteSign
-This is the demo project I created for my talk about Visual Studio App Center Auth & Dataa at the [Queensland C# Mobile App Developers](https://www.meetup.com/Queensland-based-MonoTouch-and-Mono-for-Android/) meetup on the 27th August 2019.  
+# My Favourite Sign Demo Project
+This is the demo project I created for my talk about Visual Studio App Center Auth & Data at the [Queensland C# Mobile App Developers](https://www.meetup.com/Queensland-based-MonoTouch-and-Mono-for-Android/) meetup on the 27th August 2019.  
 
 This project is designed to show a very basic scenario where Visual Studio App Center Auth is used to log in a user and Visual Studio App Center Data is used to store a saved value. It is not an example of a well architected app and should not be used as a reference on how to architect a Xamarin Forms app.
 
