@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\NoEntry.png" />
+    <None Remove="Images\NoEntryRTA.png" />
+    <None Remove="Images\NoLeftTurn.png" />
+    <None Remove="Images\NoLeftTurnRTA.png" />
+    <None Remove="Images\NoRightTurn.png" />
+    <None Remove="Images\NoRightTurnRTA.png" />
+    <None Remove="Images\NoUTurn.png" />
+    <None Remove="Images\NoUTurnRTA.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\NoEntry.png" />
+    <EmbeddedResource Include="Images\NoEntryRTA.png" />
+    <EmbeddedResource Include="Images\NoLeftTurn.png" />
+    <EmbeddedResource Include="Images\NoLeftTurnRTA.png" />
+    <EmbeddedResource Include="Images\NoRightTurn.png" />
+    <EmbeddedResource Include="Images\NoRightTurnRTA.png" />
+    <EmbeddedResource Include="Images\NoUTurn.png" />
+    <EmbeddedResource Include="Images\NoUTurnRTA.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AppCenter.Auth" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AppCenter.Data" Version="2.1.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.0" />
+  </ItemGroup>
+</Project>

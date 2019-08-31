@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MyFavouriteSign.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label 
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            x:Name="DisplayName"/>
+        <Button Text="Load Profile" Clicked="LoadProfile_Clicked" x:Name="LoadProfileButton"></Button>
+        <Picker x:Name="SignPicker"
+                Title="Select A State/Territory"
+                TitleColor="Black"
+                SelectedIndexChanged="StateTerritoryPicker_SelectedIndexChanged"
+                IsVisible="False">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>None</x:String>
+                    <x:String>ACT</x:String>
+                    <x:String>NSW</x:String>
+                    <x:String>NT</x:String>
+                    <x:String>QLD</x:String>
+                    <x:String>SA</x:String>
+                    <x:String>TAS</x:String>
+                    <x:String>VIC</x:String>
+                    <x:String>WA</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Grid HorizontalOptions="Center"
+              VerticalOptions="CenterAndExpand"
+              IsVisible="False"
+              x:Name="SignGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image x:Name="NoEntry" Grid.Row="0" Grid.Column="0" />
+            <Image x:Name="NoUTurn" Grid.Row="0" Grid.Column="1" />
+            <Image x:Name="NoLeftTurn" Grid.Row="1" Grid.Column="0" />
+            <Image x:Name="NoRightTurn" Grid.Row="1" Grid.Column="1" />
+        </Grid>
+        <Button Text="Save" Clicked="Save_Clicked" IsVisible="False" x:Name="SaveButton"></Button>
+        <Button Text="Sign Out" Clicked="SignOut_Clicked" IsVisible="False" x:Name="SignOutButton"></Button>
+    </StackLayout>
+
+</ContentPage>
